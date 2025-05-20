@@ -30,7 +30,7 @@ Backend (Python):
 ## Getting Started
 1. Clone this repo
 ```
-git clone https://github.com/your-username/resume-scanner.git
+git clone https://github.com/your-username/Resume-Scanner.git
 cd resume-scanner
 ```
 2. Setup Python environment
