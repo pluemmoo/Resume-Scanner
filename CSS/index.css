@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-theme {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: #e5e7eb;
+}
+body.dark-theme path {
+  fill: #1e293b;
+}
+body.dark-theme .container h1 {
+  color: #f3f4f6;
+}
+body.dark-theme #submitResume {
+  background-color: #3b82f6;
+  color: white;
+}
+body.dark-theme .functionbar {
+  background-color: #1e293b;
+}
+body.dark-theme .functionbar button {
+  color: #cbd5e1;
+}
+body.dark-theme .functionbar button.active {
+  color: #8ab4f8;
+  font-weight: 600;
+}
+body.dark-theme .box {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+body.dark-theme #my-awesome-dropzone {
+  background-color: #1e293b;
+}
+body.dark-theme #my-awesome-dropzone .dz-message {
+  color: #93c5fd;
+}
+body.dark-theme footer {
+  background: #1f2937;
+  color: #cbd5e1;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme {
+  background: linear-gradient(180deg, #008ae6 0%, #0099ff 100%);
+  color: #333;
+}
+body.light-theme path {
+  fill: #0099ff;
+}
+body.light-theme .container h1 {
+  color: white;
+}
+body.light-theme #submitResume {
+  background-color: #5409DA;
+}
+body.light-theme .functionbar {
+  background-color: #ffffff;
+}
+body.light-theme .functionbar button {
+  color: #333;
+}
+body.light-theme .functionbar button.active {
+  color: #5409DA;
+  font-weight: 600;
+}
+body.light-theme .box {
+  background-color: #ffffff;
+  color: #333;
+}
+body.light-theme #my-awesome-dropzone {
+  background-color: #ffffff;
+}
+body.light-theme #my-awesome-dropzone .dz-message {
+  color: #0a0ad5;
+}
+body.light-theme footer {
+  background: #8DD8FF;
+  color: #444;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  z-index: -1;
+}
+
+.wave-bg {
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.wrapper {
+  margin-top: -330px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 36rem;
+  margin-top: 3rem;
+}
+.container h1 {
+  font-size: 50px;
+  color: white;
+}
+.container #submitResume {
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  margin-top: 1.5rem;
+  padding: 0.5rem 4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.container .functionbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+.container .functionbar button {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.container .functionbar button:hover {
+  transform: scale(1.1);
+}
+.container .functionbar button.active {
+  font-weight: 600;
+}
+
+.results-layout {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+.results-layout .box {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.results-layout .full-width {
+  grid-column: 1/-1;
+}
+
+#positionBox ul {
+  margin-top: 1.5rem;
+  padding-left: 1.25rem;
+}
+#positionBox ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+#skillsBox canvas {
+  max-height: 20rem;
+  margin-top: 1.5rem;
+  display: inline-block;
+}
+
+#profileBox {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+#profileBox .subsection h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#profileBox .subsection ul {
+  padding-left: 1.25rem;
+}
+#profileBox .subsection ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+#profileBox .subsection p {
+  font-size: 1.1rem;
+}
+
+#suggestions {
+  margin-top: 1.5rem;
+}
+#suggestions h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#suggestions ul {
+  padding-left: 1.25rem;
+}
+#suggestions ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.results-hidden {
+  display: none;
+}
+
+.suggestionsBox-hidden {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#my-awesome-dropzone {
+  margin-top: 2rem;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  width: 20rem;
+  height: 12rem;
+}
+
+#my-awesome-dropzone .dz-message {
+  font-size: 18px;
+}
+
+.dz-preview {
+  display: inline-block;
+  margin: 15px;
+  position: relative;
+  width: 120px;
+}
+
+.dz-image img {
+  width: 100%;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+
+.dz-success-mark,
+.dz-error-mark {
+  display: none !important;
+}
+
+.dz-remove {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #dc3545;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
