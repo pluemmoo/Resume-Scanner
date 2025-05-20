@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Scanner</title>
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="light-theme dark-theme">
+    <div class="wave-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill-opacity="1"
+                d="M0,192L48,181.3C96,171,192,149,288,128C384,107,480,85,576,69.3C672,53,768,43,864,80C960,117,1056,203,1152,218.7C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <h1>Resume Scanner</h1>
+            <form action="http://localhost:8000/analyze-resume/" class="dropzone" id="my-awesome-dropzone">
+                <div class="dz-message" data-dz-message>
+                    <span><strong>Drop your resume here or click to upload</strong></span>
+                </div>
+            </form>
+
+            <button id="submitResume">Scan Resume</button>
+
+            <div class="functionbar">
+                <button id="downloadReportTab">Download Report</button>
+                <button id="reScanTab">Re-Scan</button>
+                <button id="suggestionsTab">Suggestions</button>
+                <button id="themeTab">🌙 Dark Theme</button>
+            </div>
+        </div>
+
+        <div class="results-layout results-hidden">
+            <div class="box" id="positionBox">
+                <h2>Suggested Position</h2>
+                <ul id="positions"></ul>
+            </div>
+
+            <div class="box" id="profileBox">
+                <h2>Candidate Profile</h2>
+
+                <div class="subsection">
+                    <h3>Strengths</h3>
+                    <ul id="strengths">
+                        <!-- dynamically filled -->
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Weaknesses</h3>
+                    <ul id="weaknesses">
+                        <!-- dynamically filled -->
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Soft Skills</h3>
+                    <ul id="softSkills">
+                        <!-- dynamically filled -->
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h3>Profile Summary</h3>
+                    <p id="profileSummary">
+                        <!-- dynamically filled -->
+                    </p>
+                </div>
+            </div>
+            
+            <div class="box" id="skillsBox">
+                <h2>Skill Distribution</h2>
+                <canvas id="skillChart"></canvas>
+            </div>
+
+
+            <div class="box full-width suggestionsBox-hidden" id="suggestionsBox">
+                <h2>Suggestions</h2>
+                <div id="suggestions"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Resume Scanner. All rights reserved.</p>
+            <p>Made with ❤️ by Chaiwat Plongkaew 2021326660023</p>
+        </div>
+    </footer>
+
+    <script src="backend/index.js"></script>
+</body>
+
+</html>
